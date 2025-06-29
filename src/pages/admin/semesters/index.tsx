@@ -141,6 +141,19 @@ export default function Home() {
           : null
       );
 
+        // Reset form setelah berhasil menambahkan course
+        courseForm.reset({
+          code: "",
+          name: "",
+          kuliah_credit: "",
+          praktikum_credit: "",
+          responsi_credit: "",
+          kuliah_class_count: "",
+          praktikum_class_count: "",
+          responsi_class_count: "",
+          semesters: ""
+        });
+
         console.log("Course created");
       } catch (error) {
         console.error(error);
