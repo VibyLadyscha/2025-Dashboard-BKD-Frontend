@@ -181,7 +181,9 @@ export default function Home() {
           <h4 className="border-b border-gray-300 pb-1 mb-4"><span className="text-xl font-semibold text-[#2C3E50]">Courses</span></h4>
           <div className="grid grid-cols-1 gap-2">
             {courses &&
-              courses.map((course) => (
+              courses
+                .sort((a, b) => a.code.localeCompare(b.code))
+                .map((course) => (
                 <React.Fragment key={course.id}>
                   <Button
                     onClick={() => {
